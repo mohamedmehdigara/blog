@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index', function () {
-    return 'Hello world';
+Route::get('index/{id}/{name}', function ($id, $name) {
+    return 'User ID:'.$id." Name".$name;
 });
