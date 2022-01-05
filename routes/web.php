@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('index/{id}/{name}', function ($id, $name) {
     return 'User ID:'.$id." Name ".$name;
 })->whereNumber('id')->whereAlpha('name');
+
+Route::prefix('admin/posts')->name('admin.posts')->group(function(){
+    Route::view('index', 'index_view')->name('index');
+    Route::view('show', 'show_view')->name('show');
+    Route::view('create', 'create_view')->name('create');
+});
