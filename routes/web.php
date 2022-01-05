@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('index/{id}/{name}', function ($id, $name) {
     return 'User ID:'.$id." Name ".$name;
-});
+})->whereNumber('id')->whereAlpha('name');
