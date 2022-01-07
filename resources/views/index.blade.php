@@ -1,1 +1,1 @@
-<x-alert>Page is not found</x-alert>
+<x-layout><div>Page is not found</div></x-layo>
